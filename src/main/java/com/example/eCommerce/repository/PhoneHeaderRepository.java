@@ -37,7 +37,7 @@ public class PhoneHeaderRepository {
 		parameterSource.addValue(ID, request.getId());
 		
 		PhoneHeaderResponse response = new PhoneHeaderResponse();
-		SellerInfo sellerInfo = new SellerInfo();
+		
 		List<SellerInfo> sellerInfoList = new ArrayList<>();
 		
 		jdbcTemplate.query(SQL_SELECT_PHONE_HEADER, parameterSource, results -> {
@@ -49,7 +49,7 @@ public class PhoneHeaderRepository {
 			response.setBrand(results.getString(BRAND));
 			response.setWarranty(results.getString(WARRANTY));
 			
-			//add seller list logic
+			SellerInfo sellerInfo = new SellerInfo();
 			sellerInfo.setId(results.getString(SELLER_ID));
 			sellerInfo.setName(results.getString(SELLER_NAME));
 			sellerInfo.setPrice(results.getString(PRICE));
