@@ -13,7 +13,7 @@ public class InsertHeaderService {
 	InsertHeaderRepository repository;
 	
 	public void savePhoneHeaderInfo(PhoneHeaderResponse request) {
-		repository.savePhoneHeaderInfo(request);
+		repository.saveMultiplePhoneHeaderInfo(request);
 	}
 	
 }
