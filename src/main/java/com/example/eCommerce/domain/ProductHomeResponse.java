@@ -1,6 +1,8 @@
 package com.example.eCommerce.domain;
 
-public class ProductHomeResponse {
+import java.io.Serializable;
+
+public class ProductHomeResponse implements Serializable{
 	private String id;
 	private String name;
 	private String ramOptions;
