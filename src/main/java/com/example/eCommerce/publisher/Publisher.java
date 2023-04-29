@@ -19,7 +19,7 @@ private static final Logger logger = LoggerFactory.getLogger(Publisher.class);
 	
 	private final KafkaTemplate<String, Object> kafkaTemplate;
 	
-	private String topicString = "dosldbrc-topicTest";
+	private String topicString = "topic1";
 
 	
 	@Autowired
